@@ -1,0 +1,22 @@
+import Link from "next/link";
+import type { AnchorHTMLAttributes, ReactNode } from "react";
+
+type ButtonProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href: string;
+  children: ReactNode;
+  variant?: "primary" | "secondary" | "ghost";
+};
+
+export function Button({
+  href,
+  children,
+  variant = "primary",
+  className = "",
+  ...props
+}: ButtonProps) {
+  return (
+    <Link className={`btn btn-${variant} ${className}`} href={href} {...props}>
+      {children}
+    </Link>
+  );
+}

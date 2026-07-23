@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Myvytamin Website
 
-## Getting Started
+Brand Experience für Myvytamin auf Basis der Blueprint-Datei.
 
-First, run the development server:
+## Start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Checks
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run lint
+npx tsc --noEmit
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Assets
 
-## Learn More
+Gefunden und eingebunden:
 
-To learn more about Next.js, take a look at the following resources:
+- `intro-01-matcha-closed.png`
+- `intro-02-matcha-split.png`
+- `ssstik.io_@myvytamin_1784818340041.mp4`
+- `ssstik.io_1784818463618.mp4`
+- `ssstik.io_1784818740632.mp4`
+- `ssstik.io_1784818610577.mp4`
+- `146439c1-fd9c-4c3d-86f0-47a3ea60b806.png` als Flyer-/Logo-/Cake-Visual
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Nicht gefunden unter den Blueprint-Dateinamen:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `intro-03-event-card-open.png`
+- `07e526a6-7e85-411f-a893-ceeaaaa439c3.jpg`
+- `f5778a69-6f64-42f6-8004-4043f15cc4ac.jpg`
+- `6ab83b03-e8ba-4156-af5c-097fc64cd5f5.jpg`
+- `ac836bd3-4d72-42f7-b878-6b8d45b23f3d.jpg`
+- `59a60814-9605-4466-802f-1e4dd5a52bb3.png`
+- `5a9d86ad-d09d-4cbb-a5e2-be0c46c525b9.png`
 
-## Deploy on Vercel
+Die Website nutzt deshalb einen gestalteten DOM-Eventbalken mit aktuellen 2026-Daten und rendert keine veraltete 2025-Grafik als Eventinformation.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Offene Production-Punkte
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- echtes Impressum
+- finaler Datenschutztext
+- Formular-Mailadapter oder CRM
+- Google-Maps-Link
+- Calendar-Link
+- finale Domain für `sitemap.ts`
+- echte H.264-Videooptimierung und Posterframes
+- echte transparente Logo- und Cup-Freistellung

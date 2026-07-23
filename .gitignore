@@ -36,6 +36,14 @@ yarn-error.log*
 # vercel
 .vercel
 
+# local visual QA screenshots
+desktop-*.png
+mobile-*.png
+updated-*.png
+final-*.png
+no-qr-*.png
+reference-format-*.png
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
