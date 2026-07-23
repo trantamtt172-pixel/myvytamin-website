@@ -26,7 +26,7 @@ export function HeroSection() {
           </Button>
         </div>
         <p className="microcopy">
-          Nächstes Pop-up / 22.08.2026 / {event.address.city}
+          Nächstes Pop-up / {event.shortDate} / {event.address.city}
         </p>
       </div>
       <div className="hero-phone">

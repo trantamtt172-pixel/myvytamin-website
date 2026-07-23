@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { brand } from "@/data/brand";
 import { event } from "@/data/event";
 
@@ -29,7 +31,7 @@ export function IntroEventBar({ debug = false }: { debug?: boolean }) {
           <p className="event-kicker">Komm vorbei zu unserem</p>
           <h2>POP UP EVENT!</h2>
           <div className="event-pills" aria-label="Eventdaten">
-            <span>22.08.2026</span>
+            <span>{event.shortDate}</span>
             <span>{event.displayTime}</span>
           </div>
         </div>
@@ -48,12 +50,16 @@ export function IntroEventBar({ debug = false }: { debug?: boolean }) {
         </div>
 
         <div className="event-brand">
-          <span className="brand-mark">MV</span>
-          <span>{brand.name}</span>
-          <strong>MATCHA & MORE</strong>
+          <Image
+            className="event-logo-image"
+            src="/assets/images/original/myvytamin-logo-large.png"
+            alt={`${brand.name} Logo`}
+            width={1254}
+            height={1254}
+            priority
+          />
           <div className="event-contact">
-            <span>{brand.instagram}</span>
-            <span>{brand.tiktok}</span>
+            <span>Instagram & TikTok: {brand.instagram}</span>
             <span>{brand.email}</span>
             <span>
               {event.address.street}, {event.address.city}

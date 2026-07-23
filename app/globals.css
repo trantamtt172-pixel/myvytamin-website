@@ -685,7 +685,7 @@ a:focus-visible {
 .intro-event-bar {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.78fr);
+  grid-template-columns: minmax(0, 1.3fr) minmax(300px, 0.82fr);
   grid-template-rows: auto 1fr;
   align-items: stretch;
   column-gap: clamp(20px, 2.4vw, 38px);
@@ -750,7 +750,7 @@ a:focus-visible {
 .script-hook {
   justify-self: start;
   margin-left: clamp(18px, 2vw, 42px);
-  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-size: clamp(2.35rem, 3.65vw, 3.75rem);
   line-height: 0.8;
   transform: rotate(-5deg);
 }
@@ -759,12 +759,13 @@ a:focus-visible {
   margin-top: -2px;
   text-align: center;
   font-weight: 800;
+  font-size: clamp(1rem, 1.25vw, 1.3rem);
 }
 
 .event-main h2 {
   color: var(--matcha-600);
   font-family: var(--font-fraunces), serif;
-  font-size: clamp(2.8rem, 4.25vw, 5.15rem);
+  font-size: clamp(3.35rem, 5vw, 6rem);
   line-height: 0.9;
   text-align: center;
   white-space: nowrap;
@@ -837,7 +838,9 @@ a:focus-visible {
 .event-love {
   grid-column: 1 / -1;
   margin-top: 8px;
-  font-size: clamp(1.25rem, 1.8vw, 1.9rem);
+  color: #dc6d7c;
+  font-size: clamp(1.8rem, 2.45vw, 2.65rem);
+  font-weight: 800;
   text-align: center;
   transform: rotate(-2deg);
 }
@@ -846,10 +849,18 @@ a:focus-visible {
   grid-column: 2;
   grid-row: 1 / span 2;
   align-content: center;
-  gap: 10px;
+  gap: 8px;
   justify-items: center;
   text-align: center;
   padding-left: clamp(12px, 2vw, 24px);
+}
+
+.event-logo-image {
+  display: block;
+  width: min(285px, 86%);
+  max-height: min(220px, 38vh);
+  object-fit: contain;
+  filter: drop-shadow(0 14px 24px rgba(80, 68, 45, 0.12));
 }
 
 .event-brand > span:not(.brand-mark) {
@@ -877,16 +888,16 @@ a:focus-visible {
 
 .event-contact {
   display: grid;
-  gap: 7px;
-  margin-top: 10px;
+  gap: 6px;
+  margin-top: 6px;
   width: min(260px, 100%);
-  font-size: 0.88rem;
+  font-size: 0.84rem;
 }
 
 .event-contact span {
   border-radius: 999px;
   background: rgba(255, 249, 244, 0.58);
-  padding: 7px 12px;
+  padding: 6px 12px;
   font-family: var(--font-manrope), Arial, sans-serif;
   font-weight: 700;
   letter-spacing: 0;
