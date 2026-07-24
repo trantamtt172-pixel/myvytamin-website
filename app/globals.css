@@ -1045,28 +1045,55 @@ a:focus-visible {
   }
 
   .intro-event-shell {
-    width: min(94vw, 560px);
+    width: min(88vw, 430px);
   }
 
   .intro-event-bar {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    gap: 12px;
+    gap: 9px;
     aspect-ratio: auto;
     min-height: auto;
-    padding: 18px;
+    max-height: min(74svh, 560px);
+    padding: clamp(14px, 4vw, 18px);
     text-align: center;
+  }
+
+  .intro-event-bar::before {
+    display: none;
   }
 
   .event-brand {
     grid-column: auto;
     grid-row: auto;
     padding-left: 0;
+    gap: 4px;
+  }
+
+  .script-hook {
+    justify-self: center;
+    margin-left: 0;
+    font-size: clamp(2.1rem, 12vw, 3.2rem);
+  }
+
+  .event-kicker {
+    font-size: clamp(0.82rem, 3.5vw, 1rem);
   }
 
   .event-main h2 {
-    font-size: 2.15rem;
+    font-size: clamp(2.25rem, 12vw, 3.8rem);
+    line-height: 0.82;
     white-space: normal;
+  }
+
+  .event-pills {
+    gap: 7px;
+    margin-top: 2px;
+  }
+
+  .event-pills span {
+    padding: 6px 10px;
+    font-size: clamp(0.78rem, 3.4vw, 0.9rem);
   }
 
   .event-offer {
@@ -1074,10 +1101,39 @@ a:focus-visible {
     grid-row: auto;
     grid-template-columns: 1fr;
     justify-items: center;
+    gap: 8px;
+    padding-bottom: 0;
+  }
+
+  .expect-label {
+    display: none;
+  }
+
+  .offer-item {
+    width: min(260px, 100%);
+    gap: 2px;
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  .offer-item strong {
+    font-size: clamp(1rem, 4.5vw, 1.25rem);
+  }
+
+  .offer-item span {
+    font-size: clamp(0.82rem, 3.6vw, 0.95rem);
   }
 
   .event-love {
+    margin-top: 0;
+    font-size: clamp(1.45rem, 7.2vw, 2.05rem);
+    line-height: 0.95;
     text-align: center;
+  }
+
+  .event-logo-image {
+    width: min(170px, 54vw);
+    max-height: min(148px, 21svh);
   }
 
   .brand-mark {
@@ -1091,7 +1147,7 @@ a:focus-visible {
   }
 
   .cup-stage {
-    --cup-size: min(78vw, 420px);
+    --cup-size: min(74vw, 360px);
   }
 }
 

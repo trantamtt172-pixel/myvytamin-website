@@ -31,6 +31,13 @@ export function IntroExperience() {
 
     const ctx = gsap.context(() => {
       const q = gsap.utils.selector(element);
+      const isMobile = window.matchMedia("(max-width: 900px)").matches;
+      const cupOpenDistance = isMobile ? 64 : 92;
+      const shadowOpenDistance = isMobile ? 54 : 78;
+      const cupExitDistance = isMobile ? 118 : 150;
+      const barRevealStart = isMobile ? "inset(0 42% 0 42%)" : "inset(0 49% 0 49%)";
+      const barStartScale = isMobile ? 0.98 : 0.94;
+      const barExitScale = isMobile ? 1.08 : 1.22;
       const done = () => {
         sessionStorage.setItem(INTRO_STORAGE_KEY, "1");
         document.body.classList.remove("intro-locked");
@@ -53,15 +60,15 @@ export function IntroExperience() {
         .to(q(".cup-half"), { opacity: 1, duration: 0.01 }, 2.18)
         .to(q(".cup-full"), { opacity: 0, duration: 0.01 }, 2.18)
         .fromTo(q(".cup-seam"), { opacity: 0 }, { opacity: 0.7, duration: 0.1, yoyo: true, repeat: 1 }, 2.2)
-        .to(q(".cup-left"), { xPercent: -92, rotate: -0.35, duration: 1.85, ease: "power4.inOut" }, 2.32)
-        .to(q(".cup-right"), { xPercent: 92, rotate: 0.35, duration: 1.85, ease: "power4.inOut" }, 2.32)
-        .to(q(".cup-shadow-left"), { xPercent: -78, opacity: 0.42, duration: 1.85, ease: "power4.inOut" }, 2.32)
-        .to(q(".cup-shadow-right"), { xPercent: 78, opacity: 0.42, duration: 1.85, ease: "power4.inOut" }, 2.32)
-        .fromTo(q(".intro-event-shell"), { clipPath: "inset(0 49% 0 49%)", opacity: 0, scaleX: 0.94 }, { clipPath: "inset(0 0% 0 0%)", opacity: 1, scaleX: 1, duration: 1.75, ease: "expo.inOut" }, 2.52)
+        .to(q(".cup-left"), { xPercent: -cupOpenDistance, rotate: -0.35, duration: 1.85, ease: "power4.inOut" }, 2.32)
+        .to(q(".cup-right"), { xPercent: cupOpenDistance, rotate: 0.35, duration: 1.85, ease: "power4.inOut" }, 2.32)
+        .to(q(".cup-shadow-left"), { xPercent: -shadowOpenDistance, opacity: 0.42, duration: 1.85, ease: "power4.inOut" }, 2.32)
+        .to(q(".cup-shadow-right"), { xPercent: shadowOpenDistance, opacity: 0.42, duration: 1.85, ease: "power4.inOut" }, 2.32)
+        .fromTo(q(".intro-event-shell"), { clipPath: barRevealStart, opacity: 0, scaleX: barStartScale }, { clipPath: "inset(0 0% 0 0%)", opacity: 1, scaleX: 1, duration: 1.75, ease: "expo.inOut" }, 2.52)
         .fromTo(q(".intro-event-bar > *"), { y: 12, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.035, duration: 0.48, ease: "power2.out" }, 3.25)
-        .to(q(".cup-left"), { xPercent: -150, opacity: 0, duration: 1.2, ease: "power3.inOut" }, 5.75)
-        .to(q(".cup-right"), { xPercent: 150, opacity: 0, duration: 1.2, ease: "power3.inOut" }, 5.75)
-        .to(q(".intro-event-shell"), { scale: 1.22, opacity: 0, duration: 1.1, ease: "power3.inOut" }, 5.85)
+        .to(q(".cup-left"), { xPercent: -cupExitDistance, opacity: 0, duration: 1.2, ease: "power3.inOut" }, 5.75)
+        .to(q(".cup-right"), { xPercent: cupExitDistance, opacity: 0, duration: 1.2, ease: "power3.inOut" }, 5.75)
+        .to(q(".intro-event-shell"), { scale: barExitScale, opacity: 0, duration: 1.1, ease: "power3.inOut" }, 5.85)
         .to(q(".intro-root-inner"), { opacity: 0, duration: 0.35 }, 6.85);
     }, element);
 
