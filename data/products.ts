@@ -1,20 +1,20 @@
 export const matchaProducts = [
   {
-    name: "Vanilla Matcha Latte",
-    copy: "Sanft, cremig und vertraut - Matcha mit einer feinen Vanillenote.",
-    taste: "cremig / weich / vanilla",
+    name: "Classic Matcha Latte",
+    copy: "Der klare Myvytamin-Klassiker: cremig, grün und smooth.",
+    taste: "klassisch / cremig / matcha",
     accent: "matcha",
   },
   {
-    name: "Strawberry / Mango Matcha Latte",
-    copy: "Frucht trifft Matcha: frisch, farbig und genau richtig für sonnige Tage.",
-    taste: "fruchtig / frisch / playful",
+    name: "Strawberry Matcha Latte",
+    copy: "Fruchtig, süß und frisch - Matcha mit Strawberry-Vibe.",
+    taste: "strawberry / frisch / sweet",
     accent: "berry",
   },
   {
     name: "Ube Matcha Latte - Signature",
     copy: "Erdiger Matcha, cremige Ube und diese Farbe, die man nicht vergisst.",
-    taste: "cremig / nussig / signature",
+    taste: "ube / cremig / signature",
     accent: "ube",
   },
 ] as const;

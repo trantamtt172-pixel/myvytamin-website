@@ -1,8 +1,8 @@
 export const brand = {
   name: "Myvytamin",
   claim: "Good Matcha. Good Mood.",
-  supportClaim: "Von Myvytamin entwickelt. Für dich hausgemacht.",
-  email: "damsilvia1703@gmail.com",
+  supportClaim: "Rezeptur von der bekannten Influencerin Myvytamin.",
+  email: "myvytamin@gmail.com",
   instagram: "@myvytamin",
   tiktok: "@myvytamin",
   instagramUrl: "https://www.instagram.com/myvytamin",

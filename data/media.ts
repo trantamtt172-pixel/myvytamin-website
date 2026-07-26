@@ -7,7 +7,7 @@ export const media = {
     cupAlpha: "/assets/intro/derived/matcha-cup-alpha.png",
   },
   images: {
-    flyer: "/assets/images/original/myvytamin-flyer-logo-cakes.png",
+    flyer: "/assets/images/original/myvytamin-popup-flyer-2026.png",
   },
   videos: {
     hero: "/assets/videos/original/ssstik.io_@myvytamin_1784818340041.mp4",

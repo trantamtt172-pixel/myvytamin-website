@@ -16,8 +16,8 @@ export function PopupEventSection() {
     <section className="section popup-section" id="popup">
       <div className="event-panel">
         <SectionHeading eyebrow="SAVE THE DATE" title="Matcha, Cookies & good mood in Pfullingen.">
-          Komm vorbei, probiere die Myvytamin-Favoriten und finde deinen neuen
-          Signature Drink.
+          Komm vorbei, genieße den Moment und probiere hausgemachte Matcha
+          Lattes und Cookies nach Myvytamin-Rezeptur.
         </SectionHeading>
         <div className="event-facts">
           <strong>{event.displayDate}</strong>
@@ -42,7 +42,13 @@ export function PopupEventSection() {
         </div>
       </div>
       <div className="event-flyer">
-        <Image src={media.images.flyer} alt="Myvytamin Event- und Angebotsflyer" width={900} height={1200} />
+        <Image
+          src={media.images.flyer}
+          alt="Myvytamin Pop-up Event Flyer mit Datum, Uhrzeit, Matcha Lattes und Cookies"
+          width={1024}
+          height={1536}
+          sizes="(max-width: 900px) 90vw, 520px"
+        />
       </div>
     </section>
   );

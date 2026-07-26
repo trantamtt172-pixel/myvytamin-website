@@ -8,7 +8,7 @@ export function HomemadeStory() {
       <div>
         <SectionHeading
           eyebrow="THE MYVYTAMIN WAY"
-          title="Von Myvytamin entwickelt. Für dich hausgemacht."
+          title="Rezeptur von Myvytamin. 100 % hausgemacht."
         >
           Eigene Rezeptideen, sorgfältig ausgewählte Zutaten und ganz viel
           Gefühl fürs Detail. Myvytamin verbindet Matcha, Baking und
@@ -23,9 +23,9 @@ export function HomemadeStory() {
       <div className="flyer-art">
         <Image
           src={media.images.flyer}
-          alt="Myvytamin Flyer mit Kuchen, Torten und Matcha-Getränken"
-          width={900}
-          height={1200}
+          alt="Myvytamin Pop-up Event Flyer mit Matcha Lattes, Cookies und QR-Code"
+          width={1024}
+          height={1536}
           sizes="(max-width: 900px) 90vw, 520px"
         />
       </div>
