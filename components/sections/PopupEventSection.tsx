@@ -17,7 +17,8 @@ export function PopupEventSection() {
       <div className="event-panel">
         <SectionHeading eyebrow="SAVE THE DATE" title="Matcha, Cookies & good mood in Pfullingen.">
           Komm vorbei, genieße den Moment und probiere hausgemachte Matcha
-          Lattes und Cookies nach Myvytamin-Rezeptur.
+          Lattes und Cookies nach Myvytamin-Rezeptur - 100 % hausgemacht mit
+          Liebe.
         </SectionHeading>
         <div className="event-facts">
           <strong>{event.displayDate}</strong>
@@ -31,7 +32,7 @@ export function PopupEventSection() {
             {matchaProducts.map((item) => <span key={item.name}>{item.name}</span>)}
           </div>
           <div>
-            <h3>Cookies</h3>
+            <h3>2 hausgemachte Cookies</h3>
             {cookieProducts.map((item) => <span key={item.name}>{item.name}</span>)}
           </div>
         </div>

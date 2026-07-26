@@ -45,7 +45,7 @@ Die Website nutzt deshalb einen gestalteten DOM-Eventbalken mit aktuellen 2026-D
 
 - echtes Impressum
 - finaler Datenschutztext
-- Formular-Mailadapter oder CRM
+- `RESEND_API_KEY` in Vercel setzen; Empfänger und Absender stehen in `.env.example`
 - Google-Maps-Link
 - Calendar-Link
 - finale Domain für `sitemap.ts`

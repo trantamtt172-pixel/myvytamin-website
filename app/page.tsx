@@ -17,12 +17,12 @@ export default function Home() {
       <Navigation />
       <main>
         <HeroSection />
+        <PopupEventSection />
         <VideoStorySection />
         <MatchaProducts />
         <CookieProducts />
         <HomemadeStory />
         <SocialVideoWall />
-        <PopupEventSection />
         <CateringSection />
       </main>
       <Footer />

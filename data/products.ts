@@ -22,11 +22,11 @@ export const matchaProducts = [
 export const cookieProducts = [
   {
     name: "Matcha White Chocolate Raspberry",
-    copy: "Herber Matcha, süße weiße Schokolade und fruchtige Himbeere in einem Cookie.",
+    copy: "Matcha, weiße Schokolade und fruchtige Himbeere - soft gebacken und hausgemacht.",
   },
   {
     name: "Brown Butter Chocolate Chip",
-    copy: "Nussige Brown Butter, schmelzende Schokolade und ein softes Herz.",
+    copy: "Nussige Brown Butter und schmelzende Chocolate Chips - außen goldig, innen soft.",
   },
 ] as const;
 
