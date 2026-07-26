@@ -6,9 +6,9 @@ export const matchaProducts = [
     accent: "matcha",
   },
   {
-    name: "Strawberry Matcha Latte",
-    copy: "Fruchtig, süß und frisch - Matcha mit Strawberry-Vibe.",
-    taste: "strawberry / frisch / sweet",
+    name: "Strawberry/Mango Matcha Latte",
+    copy: "Fruchtig, süß und frisch - Matcha mit Strawberry- und Mango-Vibe.",
+    taste: "strawberry / mango / fresh",
     accent: "berry",
   },
   {

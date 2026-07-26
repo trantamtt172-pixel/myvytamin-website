@@ -40,7 +40,7 @@ export function IntroEventBar({ debug = false }: { debug?: boolean }) {
           <p className="expect-label">Was dich erwartet:</p>
           <div className="offer-item">
             <strong>Matcha</strong>
-            <span>Classic · Strawberry · Ube</span>
+            <span>Classic · Strawberry/Mango · Ube</span>
           </div>
           <div className="offer-item">
             <strong>Cookies</strong>
