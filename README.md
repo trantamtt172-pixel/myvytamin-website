@@ -23,11 +23,16 @@ Gefunden und eingebunden:
 
 - `intro-01-matcha-closed.png`
 - `intro-02-matcha-split.png`
-- `ssstik.io_@myvytamin_1784818340041.mp4`
-- `ssstik.io_1784818463618.mp4`
-- `ssstik.io_1784818740632.mp4`
-- `ssstik.io_1784818610577.mp4`
-- `146439c1-fd9c-4c3d-86f0-47a3ea60b806.png` als Flyer-/Logo-/Cake-Visual
+- `hero-matcha-v2.mp4`
+- `baking-v2.mp4`
+- `ube-v2.mp4`
+- `story-v2.mp4`
+- passende Posterframes unter `public/assets/images/posters`
+- `myvytamin-popup-flyer-giveaway-2026.png` als aktuelles Event-Visual
+
+Die ursprünglichen Videos bleiben unter `public/assets/videos/original` erhalten.
+Die Website verwendet die H.264-/SDR-Versionen unter
+`public/assets/videos/optimized`.
 
 Nicht gefunden unter den Blueprint-Dateinamen:
 
@@ -49,5 +54,4 @@ Die Website nutzt deshalb einen gestalteten DOM-Eventbalken mit aktuellen 2026-D
 - Google-Maps-Link
 - Calendar-Link
 - finale Domain für `sitemap.ts`
-- echte H.264-Videooptimierung und Posterframes
 - echte transparente Logo- und Cup-Freistellung

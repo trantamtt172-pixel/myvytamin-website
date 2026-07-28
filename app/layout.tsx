@@ -21,7 +21,7 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://example.com"),
+  metadataBase: new URL("https://myvytamin-website.vercel.app"),
   title: "Myvytamin - Matcha, Cookies, Cakes & Catering in Pfullingen",
   description:
     "Hausgemachte Matcha Drinks, Cookies, individuelle Torten und Matcha-Catering von Myvytamin in Pfullingen. Entdecke das nächste Pop-up und sende deine Anfrage.",

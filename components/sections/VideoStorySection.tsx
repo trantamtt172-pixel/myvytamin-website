@@ -14,15 +14,27 @@ export function VideoStorySection() {
       </SectionHeading>
       <div className="story-grid">
         <div className="story-card tall">
-          <SmartVideo src={media.videos.baking} label="Hausgemachter Backprozess" />
+          <SmartVideo
+            src={media.videos.baking}
+            poster={media.posters.baking}
+            label="Hausgemachter Backprozess"
+          />
           <span>Whisked fresh.</span>
         </div>
         <div className="story-card">
-          <SmartVideo src={media.videos.ube} label="Ubbe Iced Matcha Signature Close-up" />
+          <SmartVideo
+            src={media.videos.ube}
+            poster={media.posters.ube}
+            label="Ubbe Iced Matcha Signature Close-up"
+          />
           <span>Layered slowly.</span>
         </div>
         <div className="story-card">
-          <SmartVideo src={media.videos.story} label="Persönliche Zubereitungsszene" />
+          <SmartVideo
+            src={media.videos.story}
+            poster={media.posters.story}
+            label="Persönliche Zubereitungsszene"
+          />
           <span>Made to make your day.</span>
         </div>
       </div>

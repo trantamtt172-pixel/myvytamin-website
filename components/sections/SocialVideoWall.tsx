@@ -3,7 +3,12 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { brand } from "@/data/brand";
 import { media } from "@/data/media";
 
-const videos = [media.videos.hero, media.videos.baking, media.videos.ube, media.videos.story];
+const videos = [
+  { src: media.videos.hero, poster: media.posters.hero },
+  { src: media.videos.baking, poster: media.posters.baking },
+  { src: media.videos.ube, poster: media.posters.ube },
+  { src: media.videos.story, poster: media.posters.story },
+];
 
 export function SocialVideoWall() {
   return (
@@ -12,9 +17,13 @@ export function SocialVideoWall() {
         Neue Rezepte, kleine Fails, schöne Swirls und alles dazwischen.
       </SectionHeading>
       <div className="social-wall">
-        {videos.map((src, index) => (
-          <div className={`social-tile social-tile-${index + 1}`} key={src}>
-            <SmartVideo src={src} label={`Myvytamin Social Video ${index + 1}`} />
+        {videos.map((video, index) => (
+          <div className={`social-tile social-tile-${index + 1}`} key={video.src}>
+            <SmartVideo
+              src={video.src}
+              poster={video.poster}
+              label={`Myvytamin Social Video ${index + 1}`}
+            />
           </div>
         ))}
       </div>

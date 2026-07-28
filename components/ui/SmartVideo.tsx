@@ -4,11 +4,19 @@ import { useEffect, useRef } from "react";
 
 type SmartVideoProps = {
   src: string;
+  poster: string;
   className?: string;
   label: string;
+  priority?: boolean;
 };
 
-export function SmartVideo({ src, className = "", label }: SmartVideoProps) {
+export function SmartVideo({
+  src,
+  poster,
+  className = "",
+  label,
+  priority = false,
+}: SmartVideoProps) {
   const ref = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -19,47 +27,79 @@ export function SmartVideo({ src, className = "", label }: SmartVideoProps) {
     const connection = (navigator as Navigator & {
       connection?: { saveData?: boolean };
     }).connection;
+    const shouldAvoidPlayback = reduceMotion || Boolean(connection?.saveData);
+    let isInView = false;
+    let hasSource = priority;
 
-    if (reduceMotion || connection?.saveData) {
-      video.pause();
-      return;
-    }
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && entry.intersectionRatio >= 0.55 && !document.hidden) {
-          void video.play().catch(() => undefined);
-        } else {
-          video.pause();
-        }
-      },
-      { threshold: [0, 0.55, 1] },
-    );
-
-    const onVisibility = () => {
-      if (document.hidden) video.pause();
+    const loadSource = () => {
+      if (hasSource || shouldAvoidPlayback) return;
+      hasSource = true;
+      video.src = src;
+      video.load();
     };
 
-    observer.observe(video);
+    const syncPlayback = () => {
+      if (shouldAvoidPlayback || document.hidden || !isInView) {
+        video.pause();
+        return;
+      }
+
+      loadSource();
+      if (video.readyState >= HTMLMediaElement.HAVE_CURRENT_DATA) {
+        void video.play().catch(() => undefined);
+      }
+    };
+
+    const preloadObserver = priority
+      ? null
+      : new IntersectionObserver(
+          ([entry]) => {
+            if (!entry?.isIntersecting) return;
+            loadSource();
+            preloadObserver?.disconnect();
+          },
+          { rootMargin: "600px 0px" },
+        );
+
+    const playbackObserver = new IntersectionObserver(
+      ([entry]) => {
+        isInView = Boolean(entry?.isIntersecting && entry.intersectionRatio >= 0.3);
+        syncPlayback();
+      },
+      { threshold: [0, 0.3, 0.6] },
+    );
+
+    const onReady = () => syncPlayback();
+    const onVisibility = () => syncPlayback();
+
+    preloadObserver?.observe(video);
+    playbackObserver.observe(video);
+    video.addEventListener("canplay", onReady);
+    video.addEventListener("loadeddata", onReady);
     document.addEventListener("visibilitychange", onVisibility);
 
     return () => {
-      observer.disconnect();
+      preloadObserver?.disconnect();
+      playbackObserver.disconnect();
+      video.removeEventListener("canplay", onReady);
+      video.removeEventListener("loadeddata", onReady);
       document.removeEventListener("visibilitychange", onVisibility);
+      video.pause();
     };
-  }, []);
+  }, [priority, src]);
 
   return (
     <video
       ref={ref}
+      src={priority ? src : undefined}
+      poster={poster}
       className={`smart-video ${className}`}
       muted
       loop
       playsInline
-      preload="metadata"
+      autoPlay={priority}
+      preload={priority ? "auto" : "none"}
       aria-label={label}
-    >
-      <source src={src} type="video/mp4" />
-    </video>
+    />
   );
 }

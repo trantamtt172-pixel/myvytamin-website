@@ -8,7 +8,12 @@ export function HeroSection() {
   return (
     <section className="hero" id="top" aria-labelledby="hero-title">
       <div className="hero-bg" aria-hidden="true">
-        <SmartVideo src={media.videos.hero} label="Matcha-Zubereitung im Hintergrund" />
+        <SmartVideo
+          src={media.videos.hero}
+          poster={media.posters.hero}
+          label="Matcha-Zubereitung im Hintergrund"
+          priority
+        />
       </div>
       <div className="hero-copy">
         <p className="eyebrow">MYVYTAMIN / MATCHA & MORE</p>
@@ -30,7 +35,12 @@ export function HeroSection() {
         </p>
       </div>
       <div className="hero-phone">
-        <SmartVideo src={media.videos.hero} label="Myvytamin Matcha Video" />
+        <SmartVideo
+          src={media.videos.hero}
+          poster={media.posters.hero}
+          label="Myvytamin Matcha Video"
+          priority
+        />
       </div>
     </section>
   );
