@@ -18,7 +18,7 @@ export function VideoStorySection() {
           <span>Whisked fresh.</span>
         </div>
         <div className="story-card">
-          <SmartVideo src={media.videos.ube} label="Ube Matcha Signature Close-up" />
+          <SmartVideo src={media.videos.ube} label="Ubbe Iced Matcha Signature Close-up" />
           <span>Layered slowly.</span>
         </div>
         <div className="story-card">

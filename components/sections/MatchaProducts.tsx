@@ -12,7 +12,7 @@ export function MatchaProducts() {
       </SectionHeading>
       <div className="product-layout">
         <div className="signature-video">
-          <SmartVideo src={media.videos.ube} label="Ube Matcha Latte Signature" />
+          <SmartVideo src={media.videos.ube} label="Ubbe Iced Matcha Latte Signature" />
         </div>
         <div className="product-list">
           {matchaProducts.map((item) => (

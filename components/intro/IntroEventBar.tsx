@@ -39,14 +39,17 @@ export function IntroEventBar({ debug = false }: { debug?: boolean }) {
         <div className="event-offer">
           <p className="expect-label">Was dich erwartet:</p>
           <div className="offer-item">
-            <strong>Matcha</strong>
-            <span>Classic · Strawberry/Mango · Ube</span>
+            <strong>Iced Matcha</strong>
+            <span>Classic · Strawberry/Mango · Ubbe</span>
           </div>
           <div className="offer-item">
             <strong>Cookies</strong>
-            <span>2 hausgemachte Sorten</span>
+            <span>3 hausgemachte Sorten</span>
           </div>
-          <p className="event-love">100 % hausgemacht - mit Liebe für dich!</p>
+          <p className="event-giveaway">
+            <strong>GEWINNSPIEL</strong>
+            <span>Exklusives Matcha-Set gewinnen!</span>
+          </p>
         </div>
 
         <div className="event-brand">

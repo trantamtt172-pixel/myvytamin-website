@@ -8,10 +8,10 @@ export function CookieProducts() {
         Hausgemacht, großzügig und am besten noch ein bisschen warm.
       </SectionHeading>
       <div className="cookie-grid">
-        {cookieProducts.map((item, index) => (
+        {cookieProducts.map((item) => (
           <article className="cookie-card" key={item.name}>
             <div className="cookie-visual" aria-hidden="true">
-              <span>{index === 0 ? "M" : "B"}</span>
+              <span>{item.badge}</span>
             </div>
             <h3>{item.name}</h3>
             <p>{item.copy}</p>

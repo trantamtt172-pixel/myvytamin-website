@@ -84,7 +84,7 @@ export function InquiryForm() {
       </label>
       <label>
         Gewünschte Produkte
-        <input name="products" placeholder="z. B. Ube Matcha, Cookies, Torte" />
+        <input name="products" placeholder="z. B. Ubbe Iced Matcha, Cookies, Torte" />
       </label>
       <label>
         Budgetrahmen optional

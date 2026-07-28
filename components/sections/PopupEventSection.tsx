@@ -16,9 +16,9 @@ export function PopupEventSection() {
     <section className="section popup-section" id="popup">
       <div className="event-panel">
         <SectionHeading eyebrow="SAVE THE DATE" title="Matcha, Cookies & good mood in Pfullingen.">
-          Komm vorbei, genieße den Moment und probiere hausgemachte Matcha
-          Lattes und Cookies nach Myvytamin-Rezeptur - 100 % hausgemacht mit
-          Liebe.
+          Komm vorbei, genieße den Moment und probiere hausgemachte Iced Matcha
+          Lattes und Cookies nach Myvytamin-Rezeptur. Alles 100 % hausgemacht
+          mit Liebe.
         </SectionHeading>
         <div className="event-facts">
           <strong>{event.displayDate}</strong>
@@ -28,16 +28,26 @@ export function PopupEventSection() {
         </div>
         <div className="menu-mini">
           <div>
-            <h3>Matcha</h3>
+            <h3>Iced Matcha Lattes</h3>
             {matchaProducts.map((item) => <span key={item.name}>{item.name}</span>)}
           </div>
           <div>
-            <h3>2 hausgemachte Cookies</h3>
+            <h3>3 hausgemachte Cookies</h3>
             {cookieProducts.map((item) => <span key={item.name}>{item.name}</span>)}
           </div>
         </div>
+        <div className="giveaway-callout">
+          <p className="eyebrow">GEWINNSPIEL</p>
+          <h3>{event.giveaway.title}</h3>
+          <ol>
+            {event.giveaway.steps.map((step) => <li key={step}>{step}</li>)}
+          </ol>
+        </div>
         <div className="event-actions">
           <a className="btn btn-primary" href="#anfrage">Komm vorbei</a>
+          <a className="btn btn-secondary" href="https://www.instagram.com/myvytamin" target="_blank" rel="noreferrer">
+            Auf Instagram folgen
+          </a>
           <button className="btn btn-ghost" type="button" disabled>Kalender folgt</button>
           <button className="btn btn-ghost" type="button" disabled>Route folgt</button>
         </div>
@@ -45,9 +55,9 @@ export function PopupEventSection() {
       <div className="event-flyer">
         <Image
           src={media.images.flyer}
-          alt="Myvytamin Pop-up Event Flyer mit Datum, Uhrzeit, Matcha Lattes und Cookies"
-          width={1024}
-          height={1536}
+          alt="Myvytamin Pop-up Event Flyer mit Iced Matcha Lattes, Cookies und Gewinnspiel"
+          width={1131}
+          height={1600}
           sizes="(max-width: 900px) 90vw, 520px"
         />
       </div>

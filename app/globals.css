@@ -394,7 +394,7 @@ h1 {
 }
 
 .cookie-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .cookie-visual {
@@ -491,6 +491,34 @@ h1 {
 
 .menu-mini span {
   color: rgba(38, 49, 31, 0.72);
+}
+
+.giveaway-callout {
+  margin-top: 30px;
+  border-block: 1px solid rgba(217, 111, 123, 0.34);
+  padding: 24px 0;
+  background: linear-gradient(90deg, transparent, rgba(249, 232, 228, 0.72), transparent);
+}
+
+.giveaway-callout .eyebrow {
+  margin-bottom: 8px;
+  color: var(--berry-500);
+}
+
+.giveaway-callout h3 {
+  font-family: var(--font-fraunces), serif;
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  font-weight: 500;
+  line-height: 1;
+}
+
+.giveaway-callout ol {
+  display: grid;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding-left: 22px;
+  color: rgba(38, 49, 31, 0.76);
+  line-height: 1.55;
 }
 
 .inquiry-form {
@@ -854,6 +882,31 @@ a:focus-visible {
   transform: rotate(-2deg);
 }
 
+.event-giveaway {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 7px;
+  border-block: 1px solid rgba(217, 111, 123, 0.42);
+  padding: 8px 10px;
+  color: var(--berry-500);
+  text-align: center;
+}
+
+.event-giveaway strong {
+  color: var(--berry-500);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+}
+
+.event-giveaway span {
+  color: var(--forest-900);
+  font-size: 0.92rem;
+  font-weight: 800;
+}
+
 .event-brand {
   grid-column: 2;
   grid-row: 1 / span 2;
@@ -1138,6 +1191,16 @@ a:focus-visible {
     font-size: clamp(1.45rem, 7.2vw, 2.05rem);
     line-height: 0.95;
     text-align: center;
+  }
+
+  .event-giveaway {
+    width: min(290px, 100%);
+    margin-top: 2px;
+    padding-block: 6px;
+  }
+
+  .event-giveaway span {
+    font-size: clamp(0.76rem, 3.3vw, 0.88rem);
   }
 
   .event-logo-image {

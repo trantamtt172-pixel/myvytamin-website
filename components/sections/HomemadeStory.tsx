@@ -23,7 +23,7 @@ export function HomemadeStory() {
       <div className="flyer-art">
         <Image
           src={media.images.flyer}
-          alt="Myvytamin Pop-up Event Flyer mit Matcha Lattes, Cookies und QR-Code"
+          alt="Myvytamin Pop-up Event Flyer mit Iced Matcha Lattes, Cookies und Gewinnspiel"
           width={1024}
           height={1536}
           sizes="(max-width: 900px) 90vw, 520px"
