@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { FlyerLightbox } from "@/components/ui/FlyerLightbox";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { event } from "@/data/event";
 import { media } from "@/data/media";
@@ -52,15 +52,12 @@ export function PopupEventSection() {
           <button className="btn btn-ghost" type="button" disabled>Route folgt</button>
         </div>
       </div>
-      <div className="event-flyer">
-        <Image
-          src={media.images.flyer}
-          alt="Myvytamin Pop-up Event Flyer mit Iced Matcha Lattes, Cookies und Gewinnspiel"
-          width={1131}
-          height={1600}
-          sizes="(max-width: 900px) 90vw, 520px"
-        />
-      </div>
+      <FlyerLightbox
+        className="event-flyer"
+        src={media.images.flyer}
+        alt="Myvytamin Pop-up Event Flyer mit Iced Matcha Lattes, Cookies und Gewinnspiel"
+        sizes="(max-width: 900px) 90vw, 520px"
+      />
     </section>
   );
 }

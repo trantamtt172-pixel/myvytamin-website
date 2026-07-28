@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { FlyerLightbox } from "@/components/ui/FlyerLightbox";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { media } from "@/data/media";
 
@@ -20,15 +20,12 @@ export function HomemadeStory() {
           <span>Persönlich statt beliebig</span>
         </div>
       </div>
-      <div className="flyer-art">
-        <Image
-          src={media.images.flyer}
-          alt="Myvytamin Pop-up Event Flyer mit Iced Matcha Lattes, Cookies und Gewinnspiel"
-          width={1024}
-          height={1536}
-          sizes="(max-width: 900px) 90vw, 520px"
-        />
-      </div>
+      <FlyerLightbox
+        className="flyer-art"
+        src={media.images.flyer}
+        alt="Myvytamin Pop-up Event Flyer mit Iced Matcha Lattes, Cookies und Gewinnspiel"
+        sizes="(max-width: 900px) 90vw, 520px"
+      />
     </section>
   );
 }
