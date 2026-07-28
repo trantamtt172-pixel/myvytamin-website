@@ -21,8 +21,8 @@ export function HeroSection() {
           as="h1"
           id="hero-title"
           tabIndex={-1}
-          src={media.videos.hero}
-          poster={media.posters.hero}
+          src={media.videos.videoText}
+          poster={media.posters.videoText}
           className="hero-video-title"
           fontSize={22}
           fontWeight={700}

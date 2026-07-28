@@ -11,12 +11,14 @@ export const media = {
   },
   videos: {
     hero: "/assets/videos/optimized/hero-matcha-v2.mp4",
+    videoText: "/assets/videos/optimized/sakura-video-text-v1.mp4",
     baking: "/assets/videos/optimized/baking-v2.mp4",
     ube: "/assets/videos/optimized/ube-v2.mp4",
     story: "/assets/videos/optimized/story-v2.mp4",
   },
   posters: {
     hero: "/assets/images/posters/hero-matcha-v2.jpg",
+    videoText: "/assets/images/posters/sakura-video-text-v1.jpg",
     baking: "/assets/images/posters/baking-v2.jpg",
     ube: "/assets/images/posters/ube-v2.jpg",
     story: "/assets/images/posters/story-v2.jpg",
