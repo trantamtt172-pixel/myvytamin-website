@@ -8,6 +8,9 @@ export const media = {
   },
   images: {
     flyer: "/assets/images/original/myvytamin-popup-flyer-giveaway-2026.png",
+    giveawayPrize: "/assets/images/content/giveaway-matcha-set-2026.webp",
+    matchaCookies: "/assets/images/content/matcha-cookie-photo-2026.webp",
+    mixedCookies: "/assets/images/content/mixed-cookie-photo-2026.webp",
   },
   videos: {
     hero: "/assets/videos/optimized/hero-matcha-v2.mp4",
@@ -15,6 +18,9 @@ export const media = {
     baking: "/assets/videos/optimized/baking-v2.mp4",
     ube: "/assets/videos/optimized/ube-v2.mp4",
     story: "/assets/videos/optimized/story-v2.mp4",
+    strawberryMatcha: "/assets/videos/optimized/strawberry-matcha-social-v1.mp4",
+    cookieBaking: "/assets/videos/optimized/cookie-baking-social-v1.mp4",
+    matchaCookieReveal: "/assets/videos/optimized/matcha-cookie-reveal-social-v1.mp4",
   },
   posters: {
     hero: "/assets/images/posters/hero-matcha-v2.jpg",
@@ -22,5 +28,8 @@ export const media = {
     baking: "/assets/images/posters/baking-v2.jpg",
     ube: "/assets/images/posters/ube-v2.jpg",
     story: "/assets/images/posters/story-v2.jpg",
+    strawberryMatcha: "/assets/images/posters/strawberry-matcha-social-v1.jpg",
+    cookieBaking: "/assets/images/posters/cookie-baking-social-v1.jpg",
+    matchaCookieReveal: "/assets/images/posters/matcha-cookie-reveal-social-v1.jpg",
   },
 } as const;

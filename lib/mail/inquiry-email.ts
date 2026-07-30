@@ -69,13 +69,14 @@ export async function sendInquiryEmail(
   attachments: Attachment[],
 ) {
   const apiKey = process.env.RESEND_API_KEY;
-  const recipient = process.env.INQUIRY_RECIPIENT_EMAIL;
+  const recipient =
+    process.env.INQUIRY_RECIPIENT_EMAIL ?? "myvytamin@gmail.com";
   const from =
     process.env.INQUIRY_FROM_EMAIL ??
     "Myvytamin Website <onboarding@resend.dev>";
 
-  if (!apiKey || !recipient) {
-    throw new Error("Der Mailversand ist noch nicht vollständig konfiguriert.");
+  if (!apiKey) {
+    throw new Error("RESEND_API_KEY ist noch nicht konfiguriert.");
   }
 
   const { Resend } = await import("resend");

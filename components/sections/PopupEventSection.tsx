@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FlyerLightbox } from "@/components/ui/FlyerLightbox";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { event } from "@/data/event";
@@ -43,6 +44,16 @@ export function PopupEventSection() {
             {event.giveaway.steps.map((step) => <li key={step}>{step}</li>)}
           </ol>
         </div>
+        <figure className="giveaway-prize">
+          <Image
+            src={media.images.giveawayPrize}
+            alt="Exklusives Matcha-Set des Myvytamin-Gewinnspiels"
+            width={946}
+            height={634}
+            sizes="(max-width: 900px) 90vw, 620px"
+          />
+          <figcaption>Dein Gewinn: ein exklusives Matcha-Set.</figcaption>
+        </figure>
         <div className="event-actions">
           <a className="btn btn-primary" href="#anfrage">Komm vorbei</a>
           <a className="btn btn-secondary" href="https://www.instagram.com/myvytamin" target="_blank" rel="noreferrer">

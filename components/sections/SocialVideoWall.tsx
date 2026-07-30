@@ -4,10 +4,26 @@ import { brand } from "@/data/brand";
 import { media } from "@/data/media";
 
 const videos = [
-  { src: media.videos.hero, poster: media.posters.hero },
-  { src: media.videos.baking, poster: media.posters.baking },
-  { src: media.videos.ube, poster: media.posters.ube },
-  { src: media.videos.story, poster: media.posters.story },
+  {
+    src: media.videos.strawberryMatcha,
+    poster: media.posters.strawberryMatcha,
+    label: "Strawberry Iced Matcha Latte",
+  },
+  {
+    src: media.videos.cookieBaking,
+    poster: media.posters.cookieBaking,
+    label: "Matcha-Cookies in der Backstube",
+  },
+  {
+    src: media.videos.matchaCookieReveal,
+    poster: media.posters.matchaCookieReveal,
+    label: "Matcha-Cookies vor und nach dem Backen",
+  },
+  {
+    src: media.videos.story,
+    poster: media.posters.story,
+    label: "Myvytamin Story",
+  },
 ];
 
 export function SocialVideoWall() {
@@ -22,7 +38,7 @@ export function SocialVideoWall() {
             <SmartVideo
               src={video.src}
               poster={video.poster}
-              label={`Myvytamin Social Video ${index + 1}`}
+              label={video.label}
             />
           </div>
         ))}
