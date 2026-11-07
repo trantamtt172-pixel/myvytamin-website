@@ -94,10 +94,10 @@ export const affiliateProducts = [
     href: "https://www.amazon.de/dp/B09286WMNG?tag=myvytamin0d-21&linkCode=ml1&linkId=6f308ae83c2bb56d42e64f30a58b67ca",
   },
   {
-    name: "Ausgewählter Drink-Favorit",
-    copy: "Ein weiteres ausgewähltes Produkt für besondere Drinks zuhause.",
-    image: "/assets/images/posters/ube-v2.jpg",
-    imageAlt: "Violetter Iced Drink als Inspiration",
+    name: "Matcha Tea Set – Hellgrüner Farbverlauf",
+    copy: "Matcha-Set mit Schale, Bambusbesen, Sieb, Löffel und Besenhalter.",
+    image: "/assets/images/favorites/hellgruenes-matcha-set.svg",
+    imageAlt: "Matcha-Set mit hellgrüner Keramikschale und Bambusbesen",
     href: "https://www.amazon.de/dp/B0FCQSCYP3?tag=myvytamin0d-21&linkCode=ml1&linkId=da2bbab24751e89ef4e1c5b60bc50bf3",
   },
   {
