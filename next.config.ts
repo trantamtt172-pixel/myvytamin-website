@@ -8,6 +8,16 @@ const nextConfig: NextConfig = {
         hostname: "images-eu.ssl-images-amazon.com",
         pathname: "/images/P/**",
       },
+      {
+        protocol: "https",
+        hostname: "m.media-amazon.com",
+        pathname: "/images/I/**",
+      },
+      {
+        protocol: "https",
+        hostname: "www.gosupps.com",
+        pathname: "/media/catalog/product/**",
+      },
     ],
   },
   turbopack: {
@@ -18,19 +28,28 @@ const nextConfig: NextConfig = {
       {
         source: "/assets/videos/optimized/:path*",
         headers: [
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
         ],
       },
       {
         source: "/assets/images/posters/:path*",
         headers: [
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
         ],
       },
       {
         source: "/assets/images/content/:path*",
         headers: [
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
         ],
       },
     ];
