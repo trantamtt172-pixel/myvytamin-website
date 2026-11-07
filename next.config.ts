@@ -18,16 +18,6 @@ const nextConfig: NextConfig = {
         hostname: "www.gosupps.com",
         pathname: "/media/catalog/product/**",
       },
-      {
-        protocol: "https",
-        hostname: "bestcustom.co",
-        pathname: "/cdn/shop/files/**",
-      },
-      {
-        protocol: "https",
-        hostname: "guteszeug.ch",
-        pathname: "/cdn/shop/files/**",
-      },
     ],
   },
   turbopack: {
