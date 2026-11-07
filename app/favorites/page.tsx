@@ -12,7 +12,7 @@ export default function FavoritesPage() {
   return (
     <>
       <Navigation />
-      <main>
+      <main className="favorites-main">
         <AmazonFavorites />
       </main>
       <Footer />
