@@ -1,22 +1,26 @@
+import Image from "next/image";
+import Link from "next/link";
 import { brand } from "@/data/brand";
 import { Button } from "@/components/ui/Button";
 
 const links = [
-  ["Matcha", "#matcha"],
-  ["Homemade", "#homemade"],
-  ["Cakes", "#cakes"],
+  ["Matcha", "/#matcha"],
+  ["Homemade", "/#homemade"],
+  ["Cakes", "/#cakes"],
   ["Favoriten", "/favorites"],
-  ["Pop-up", "#popup"],
-  ["Catering", "#catering"],
+  ["Pop-up", "/#popup"],
+  ["Catering", "/#catering"],
 ] as const;
 
 export function Navigation() {
   return (
     <header className="site-nav">
-      <a className="nav-logo" href="#top" aria-label="Myvytamin Start">
-        <span>MV</span>
+      <Link className="nav-logo" href="/" aria-label="Zur Myvytamin Startseite">
+        <span className="nav-logo-mark" aria-hidden="true">
+          <Image src="/assets/images/original/myvytamin-logo-large.png" alt="" fill sizes="42px" priority />
+        </span>
         {brand.name}
-      </a>
+      </Link>
       <nav aria-label="Hauptnavigation">
         {links.map(([label, href]) => (
           <a key={href} href={href}>
@@ -24,7 +28,7 @@ export function Navigation() {
           </a>
         ))}
       </nav>
-      <Button href="#anfrage" variant="primary">
+      <Button href="/#anfrage" variant="primary">
         Anfragen
       </Button>
     </header>
