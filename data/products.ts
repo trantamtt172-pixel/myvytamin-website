@@ -68,22 +68,22 @@ export const affiliateProducts = [
   {
     name: "BLOOMWARE Glasbecher mit Strohhalmen",
     copy: "Ästhetische Gläser für Iced Matcha, Iced Coffee und deine Lieblingsdrinks.",
-    image: "/assets/images/content/giveaway-matcha-set-2026.webp",
-    imageAlt: "Gläser und Matcha-Zubehör für kalte Drinks",
+    image: "https://bestcustom.co/cdn/shop/files/il_794xN.7063313169_1a16_1200x.jpg?v=1752467199",
+    imageAlt: "Glasbecher mit Bambusdeckel und Strohhalm",
     href: "https://www.amazon.de/dp/B0GR1PXN11?tag=myvytamin0d-21&linkCode=ml1&linkId=8bf4279d3dad851b09cb9855a0e3f412",
   },
   {
     name: "Zecnaud Matcha-Set mit Bambusbesen",
     copy: "Keramik und Bambus für einen entspannten Einstieg in dein Matcha-Ritual.",
-    image: "/assets/images/posters/hero-matcha-v2.jpg",
-    imageAlt: "Matcha-Zubehör für die Zubereitung",
+    image: "https://m.media-amazon.com/images/I/31dUE5CIr6L._AC_US750_.jpg",
+    imageAlt: "Pinke Matcha-Schale mit Bambusbesen und Besenhalter",
     href: "https://www.amazon.de/dp/B0FNWKMMMP?tag=myvytamin0d-21&linkCode=ml1&linkId=2591950ead7514846d0536d8f5fedbbb",
   },
   {
     name: "Ausgewählter Kitchen-Favorit",
     copy: "Ein ausgewähltes Produkt für deine Matcha- und Kitchen-Corner.",
-    image: "/assets/images/posters/strawberry-matcha-social-v1.jpg",
-    imageAlt: "Iced Matcha in einem Glas",
+    image: "https://guteszeug.ch/cdn/shop/files/81qakfhe1ll._ac_sl1500.jpg?v=1775235234",
+    imageAlt: "Matcha-Set mit Schale, Besen und Zubehör",
     href: "https://www.amazon.de/dp/B0GTQDMWKT?tag=myvytamin0d-21&linkCode=ml1&linkId=9f0ecb58b6c696ce37916bc0abcec6ff",
   },
   {
@@ -101,10 +101,10 @@ export const affiliateProducts = [
     href: "https://www.amazon.de/dp/B0FCQSCYP3?tag=myvytamin0d-21&linkCode=ml1&linkId=da2bbab24751e89ef4e1c5b60bc50bf3",
   },
   {
-    name: "Ausgewählter Myvytamin-Favorit",
-    copy: "Ein ausgewähltes Produkt für schöne Genussmomente zuhause.",
-    image: "/assets/images/posters/matcha-cookie-reveal-social-v1.jpg",
-    imageAlt: "Matcha und Cookie als Genussmoment",
+    name: "Silikon Eiswürfelform",
+    copy: "Für große Eiswürfel und extra kalte Iced Matcha- und Coffee-Momente.",
+    image: "https://m.media-amazon.com/images/I/41qHqb7Dm0L.jpg",
+    imageAlt: "Silikon Eiswürfelform für große Eiswürfel",
     href: "https://www.amazon.de/dp/B0BTN7D2K8?tag=myvytamin0d-21&linkCode=ml1&linkId=4f7512079e48ae4169d5d1a58161a59c",
   },
 ] as const;
