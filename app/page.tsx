@@ -1,6 +1,7 @@
 import { IntroExperience } from "@/components/intro/IntroExperience";
 import { Footer } from "@/components/layout/Footer";
 import { Navigation } from "@/components/layout/Navigation";
+import { AmazonFavorites } from "@/components/sections/AmazonFavorites";
 import { CateringSection } from "@/components/sections/CateringSection";
 import { CookieProducts } from "@/components/sections/CookieProducts";
 import { HeroSection } from "@/components/sections/HeroSection";
@@ -21,6 +22,7 @@ export default function Home() {
         <VideoStorySection />
         <MatchaProducts />
         <CookieProducts />
+        <AmazonFavorites />
         <HomemadeStory />
         <SocialVideoWall />
         <CateringSection />
