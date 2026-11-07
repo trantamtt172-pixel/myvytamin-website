@@ -5,6 +5,7 @@ const links = [
   ["Matcha", "#matcha"],
   ["Homemade", "#homemade"],
   ["Cakes", "#cakes"],
+  ["Favoriten", "#favorites"],
   ["Pop-up", "#popup"],
   ["Catering", "#catering"],
 ] as const;
