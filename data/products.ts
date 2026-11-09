@@ -44,6 +44,14 @@ export const cookieProducts = [
  */
 export const affiliateProducts = [
   {
+    name: "Nespresso Aeroccino Milchaufschäumer",
+    copy: "Für heißen oder kalten, cremigen Milchschaum – passend für Cappuccino, Latte und Iced Drinks.",
+    image: "/assets/images/favorites/nespresso-aeroccino-milchaufschaeumer.svg",
+    imageAlt: "Nespresso Aeroccino Milchaufschäumer in Schwarz und Edelstahl",
+    // Provided Amazon Associates link; tag has been verified.
+    href: "https://www.amazon.de/dp/B004RQE6QC/ref=cm_sw_r_as_gl_apa_gl_i_ZK37BPF9YHVYNFSRQN9W?linkCode=ml1&tag=myvytamin0d-21&linkId=7adc99da5227b8963d4e3c4fd9d3dad1&gaOptInStatus=true&ascsubtag=srctok-1054cf29dd60fa50&btn_type=ss&btn_ref=srctok-1054cf29dd60fa50",
+  },
+  {
     name: "Nespresso Kapselmaschine mit Milchaufschäumer",
     copy: "Für cremige Latte-Momente zuhause – unser Amazon-Favorit für den Coffee-Shop-Vibe in der eigenen Küche.",
     image: "https://images-eu.ssl-images-amazon.com/images/P/B01ITICQR4.01._SCLZZZZZZZ_SX500_.jpg",
