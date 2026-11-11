@@ -83,7 +83,7 @@ export function AmazonFavorites({ locale = "de" }: { locale?: Locale }) {
             </div>
             <div className={styles.copy}>
               <span>{index === 0 ? text(locale, "EXKLUSIVER VORTEIL", "EXCLUSIVE PERK") : "MYVYTAMIN PICK"}</span>
-              <h3>{item.name}</h3>
+              <h3>{locale === "en" ? englishAffiliateNames[index] ?? item.name : item.name}</h3>
               <p>{locale === "en" ? englishAffiliateCopy[index] ?? item.copy : item.copy}</p>
               {index === 0 && (
                 <div className={styles.discountCode} aria-label={text(locale, "Rabattcode SILVIA15 für 15 Prozent auf die erste Bestellung", "Discount code SILVIA15 for 15 percent off your first order")}>
@@ -117,4 +117,18 @@ const englishAffiliateCopy = [
   "Naturally purple powder for creative drinks, smoothies and desserts.",
   "Matcha set with bowl, bamboo whisk, sieve, spoon and whisk holder.",
   "For large ice cubes and extra-cold iced matcha and coffee moments.",
+] as const;
+
+const englishAffiliateNames = [
+  "Nami Matcha – your matcha moment",
+  "Creamy milk frother",
+  "At-home coffee station",
+  "Everyday ceremonial matcha",
+  "Premium matcha – 50 g",
+  "Glass cups with straws",
+  "Sakura Matcha Tea Set",
+  "Pastel Matcha Tea Set",
+  "Ube powder for creative drinks",
+  "Soft Green Matcha Tea Set",
+  "XXL ice cube tray with lid",
 ] as const;
