@@ -35,7 +35,7 @@ export function AmazonFavorites() {
               <Image src={item.image} alt={item.imageAlt} fill sizes="(max-width: 720px) 100vw, 360px" />
             </div>
             <div className={styles.copy}>
-              <span>{index === 0 ? "AKTUELLER FAVORIT" : "MYVYTAMIN PICK"}</span>
+              <span>{index === 0 ? "EXKLUSIVER VORTEIL" : "MYVYTAMIN PICK"}</span>
               <h3>{item.name}</h3>
               <p>{item.copy}</p>
               <a className={styles.link} href={item.href} target="_blank" rel="sponsored noopener noreferrer">
@@ -46,7 +46,7 @@ export function AmazonFavorites() {
         ))}
       </div>
 
-      <p className={styles.disclosure}>Als Amazon-Partner verdiene ich an qualifizierten Verkäufen.</p>
+      <p className={styles.disclosure}>Als Amazon-Partner verdiene ich an qualifizierten Verkäufen. Einzelne Empfehlungen führen direkt zu ausgewählten Marken.</p>
     </section>
   );
 }
