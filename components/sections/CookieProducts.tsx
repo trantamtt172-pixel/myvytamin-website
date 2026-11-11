@@ -2,6 +2,7 @@ import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { media } from "@/data/media";
 import { cookieProducts } from "@/data/products";
+import { type Locale, text } from "@/data/locale";
 
 const cookieVisuals = {
   "Matcha White Chocolate Raspberry": {
@@ -21,14 +22,16 @@ const cookieVisuals = {
   },
 } as const;
 
-export function CookieProducts() {
+const englishCopies = ["Matcha, white chocolate and fruity raspberry – soft-baked and homemade.", "Nutty brown butter and melting chocolate chips – golden outside, soft inside.", "Lemony, soft and finished with a delicate glaze – a fresh cookie for late summer."];
+
+export function CookieProducts({ locale = "de" }: { locale?: Locale }) {
   return (
     <section className="section cookie-section">
-      <SectionHeading eyebrow="BAKED WITH LOVE" title="Außen goldig. Innen richtig soft.">
-        Hausgemacht, großzügig und am besten noch ein bisschen warm.
+      <SectionHeading eyebrow="BAKED WITH LOVE" title={text(locale, "Außen goldig. Innen richtig soft.", "Golden outside. Really soft inside.")}>
+        {text(locale, "Hausgemacht, großzügig und am besten noch ein bisschen warm.", "Homemade, generous and best enjoyed while still a little warm.")}
       </SectionHeading>
       <div className="cookie-grid">
-        {cookieProducts.map((item) => {
+        {cookieProducts.map((item, index) => {
           const visual = cookieVisuals[item.name];
 
           return (
@@ -44,7 +47,7 @@ export function CookieProducts() {
               <div className="cookie-card-copy">
                 <span className="cookie-number" aria-hidden="true">{item.badge}</span>
                 <h3>{item.name}</h3>
-                <p>{item.copy}</p>
+                <p>{locale === "en" ? englishCopies[index] : item.copy}</p>
               </div>
             </article>
           );

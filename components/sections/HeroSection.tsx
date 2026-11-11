@@ -3,15 +3,16 @@ import { SmartVideo } from "@/components/ui/SmartVideo";
 import { VideoText } from "@/components/ui/VideoText";
 import { event } from "@/data/event";
 import { media } from "@/data/media";
+import { type Locale, text } from "@/data/locale";
 
-export function HeroSection() {
+export function HeroSection({ locale = "de" }: { locale?: Locale }) {
   return (
     <section className="hero" id="top" aria-labelledby="hero-title">
       <div className="hero-bg" aria-hidden="true">
         <SmartVideo
           src={media.videos.hero}
           poster={media.posters.hero}
-          label="Matcha-Zubereitung im Hintergrund"
+          label={text(locale, "Matcha-Zubereitung im Hintergrund", "Matcha preparation in the background")}
           priority
         />
       </div>
@@ -34,24 +35,23 @@ export function HeroSection() {
           {"Good\nMatcha.\nGood\nMood."}
         </VideoText>
         <p>
-          Persönlich entwickelt, frisch gemixt und mit Liebe hausgemacht - für
-          deinen Matcha-Moment in Pfullingen.
+          {text(locale, "Persönlich entwickelt, frisch gemixt und mit Liebe hausgemacht - für deinen Matcha-Moment in Pfullingen.", "Personally created, freshly mixed and homemade with love – for your matcha moment in Pfullingen.")}
         </p>
         <div className="hero-actions">
-          <Button href="#popup">Pop-up entdecken</Button>
+          <Button href="#popup">{text(locale, "Pop-up entdecken", "Discover the pop-up")}</Button>
           <Button href="#anfrage" variant="secondary">
-            Catering anfragen
+            {text(locale, "Catering anfragen", "Enquire about catering")}
           </Button>
         </div>
         <p className="microcopy">
-          Nächstes Pop-up / {event.shortDate} / {event.address.city}
+          {text(locale, "Next pop-up", "Next pop-up")} / {event.shortDate} / {event.address.city}
         </p>
       </div>
       <div className="hero-phone">
         <SmartVideo
           src={media.videos.hero}
           poster={media.posters.hero}
-          label="Myvytamin Matcha Video"
+          label="Myvytamin Matcha video"
           priority
         />
       </div>

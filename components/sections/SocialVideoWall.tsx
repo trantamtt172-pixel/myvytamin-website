@@ -2,6 +2,7 @@ import { SmartVideo } from "@/components/ui/SmartVideo";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { brand } from "@/data/brand";
 import { media } from "@/data/media";
+import { type Locale, text } from "@/data/locale";
 
 const videos = [
   {
@@ -26,11 +27,11 @@ const videos = [
   },
 ];
 
-export function SocialVideoWall() {
+export function SocialVideoWall({ locale = "de" }: { locale?: Locale }) {
   return (
     <section className="section social-section">
-      <SectionHeading eyebrow="BEHIND THE GOOD MOOD" title="Nicht nur ansehen. Mitfühlen.">
-        Neue Rezepte, kleine Fails, schöne Swirls und alles dazwischen.
+      <SectionHeading eyebrow="BEHIND THE GOOD MOOD" title={text(locale, "Nicht nur ansehen. Mitfühlen.", "Don’t just watch. Feel it.")}>
+        {text(locale, "Neue Rezepte, kleine Fails, schöne Swirls und alles dazwischen.", "New recipes, little fails, beautiful swirls and everything in between.")}
       </SectionHeading>
       <div className="social-wall">
         {videos.map((video, index) => (

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { type Locale, text } from "@/data/locale";
 
 const services = [
   "Individuelle Torte",
@@ -10,7 +11,7 @@ const services = [
   "Andere Anfrage",
 ];
 
-export function InquiryForm() {
+export function InquiryForm({ locale = "de" }: { locale?: Locale }) {
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
 
@@ -37,7 +38,7 @@ export function InquiryForm() {
       setMessage(
         error instanceof Error
           ? error.message
-          : "Das hat gerade nicht geklappt. Bitte versuche es später erneut.",
+          : text(locale, "Das hat gerade nicht geklappt. Bitte versuche es später erneut.", "Something went wrong. Please try again later."),
       );
     }
   }
@@ -45,9 +46,9 @@ export function InquiryForm() {
   return (
     <form className="inquiry-form" id="anfrage" onSubmit={submit}>
       <div className="form-intro">
-        <p className="eyebrow">ANFRAGE</p>
-        <h2>Erzähl kurz, was du planst.</h2>
-        <p>Wir melden uns so bald wie möglich persönlich bei dir.</p>
+        <p className="eyebrow">{text(locale, "ANFRAGE", "ENQUIRY")}</p>
+        <h2>{text(locale, "Erzähl kurz, was du planst.", "Tell us a little about what you have in mind.")}</h2>
+        <p>{text(locale, "Wir melden uns so bald wie möglich persönlich bei dir.", "We will get back to you personally as soon as possible.")}</p>
       </div>
       <label className="form-honeypot" aria-hidden="true">
         Website
@@ -62,48 +63,48 @@ export function InquiryForm() {
         <input name="email" type="email" autoComplete="email" required />
       </label>
       <label>
-        Telefonnummer optional
+        {text(locale, "Telefonnummer optional", "Phone number (optional)")}
         <input name="phone" autoComplete="tel" />
       </label>
       <label>
-        Gewünschte Leistung
+        {text(locale, "Gewünschte Leistung", "What do you need?")}
         <select name="service" required defaultValue="">
-          <option value="" disabled>Bitte wählen</option>
+          <option value="" disabled>{text(locale, "Bitte wählen", "Please choose")}</option>
           {services.map((service) => (
             <option key={service}>{service}</option>
           ))}
         </select>
       </label>
       <label>
-        Eventdatum
+        {text(locale, "Eventdatum", "Event date")}
         <input name="eventDate" type="date" />
       </label>
       <label>
-        Personenzahl
+        {text(locale, "Personenzahl", "Number of guests")}
         <input name="people" inputMode="numeric" />
       </label>
       <label>
-        Gewünschte Produkte
-        <input name="products" placeholder="z. B. Ubbe Iced Matcha, Cookies, Torte" />
+        {text(locale, "Gewünschte Produkte", "Products you would like")}
+        <input name="products" placeholder={text(locale, "z. B. Ubbe Iced Matcha, Cookies, Torte", "e.g. Ube Iced Matcha, cookies, cake")} />
       </label>
       <label>
-        Budgetrahmen optional
+        {text(locale, "Budgetrahmen optional", "Budget (optional)")}
         <input name="budget" />
       </label>
       <label className="full">
-        Nachricht
+        {text(locale, "Nachricht", "Message")}
         <textarea name="message" rows={5} required />
       </label>
       <label className="full">
-        Inspirationsbilder optional
+        {text(locale, "Inspirationsbilder optional", "Inspiration images (optional)")}
         <input name="inspiration" type="file" accept="image/png,image/jpeg,image/webp" />
       </label>
       <label className="privacy full">
         <input name="privacy" type="checkbox" required />
-        <span>Ich bin einverstanden, dass meine Angaben zur Bearbeitung der Anfrage genutzt werden.</span>
+        <span>{text(locale, "Ich bin einverstanden, dass meine Angaben zur Bearbeitung der Anfrage genutzt werden.", "I agree that my details may be used to process this enquiry.")}</span>
       </label>
       <button className="btn btn-primary full" type="submit" disabled={status === "sending"}>
-        {status === "sending" ? "Wird gesendet..." : "Anfrage senden"}
+        {status === "sending" ? text(locale, "Wird gesendet...", "Sending...") : text(locale, "Anfrage senden", "Send enquiry")}
       </button>
       {message ? <p className={`form-status ${status}`}>{message}</p> : null}
     </form>

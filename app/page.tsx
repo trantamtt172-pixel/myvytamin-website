@@ -1,33 +1,5 @@
-import { IntroExperience } from "@/components/intro/IntroExperience";
-import { Footer } from "@/components/layout/Footer";
-import { Navigation } from "@/components/layout/Navigation";
-import { AmazonFavorites } from "@/components/sections/AmazonFavorites";
-import { CateringSection } from "@/components/sections/CateringSection";
-import { CookieProducts } from "@/components/sections/CookieProducts";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { HomemadeStory } from "@/components/sections/HomemadeStory";
-import { MatchaProducts } from "@/components/sections/MatchaProducts";
-import { PopupEventSection } from "@/components/sections/PopupEventSection";
-import { SocialVideoWall } from "@/components/sections/SocialVideoWall";
-import { VideoStorySection } from "@/components/sections/VideoStorySection";
+import { HomeContent } from "@/components/pages/HomeContent";
 
 export default function Home() {
-  return (
-    <>
-      <IntroExperience />
-      <Navigation />
-      <main>
-        <HeroSection />
-        <PopupEventSection />
-        <VideoStorySection />
-        <MatchaProducts />
-        <CookieProducts />
-        <AmazonFavorites />
-        <HomemadeStory />
-        <SocialVideoWall />
-        <CateringSection />
-      </main>
-      <Footer />
-    </>
-  );
+  return <HomeContent locale="de" />;
 }

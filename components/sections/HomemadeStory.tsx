@@ -1,23 +1,22 @@
 import { FlyerLightbox } from "@/components/ui/FlyerLightbox";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { media } from "@/data/media";
+import { type Locale, text } from "@/data/locale";
 
-export function HomemadeStory() {
+export function HomemadeStory({ locale = "de" }: { locale?: Locale }) {
   return (
     <section className="section homemade-section" id="cakes">
       <div>
         <SectionHeading
           eyebrow="THE MYVYTAMIN WAY"
-          title="Rezeptur von Myvytamin. 100 % hausgemacht."
+          title={text(locale, "Rezeptur von Myvytamin. 100 % hausgemacht.", "Created by Myvytamin. 100% homemade.")}
         >
-          Eigene Rezeptideen, sorgfältig ausgewählte Zutaten und ganz viel
-          Gefühl fürs Detail. Myvytamin verbindet Matcha, Baking und
-          persönliche Momente.
+          {text(locale, "Eigene Rezeptideen, sorgfältig ausgewählte Zutaten und ganz viel Gefühl fürs Detail. Myvytamin verbindet Matcha, Baking und persönliche Momente.", "Original recipe ideas, carefully chosen ingredients and a love for every detail. Myvytamin brings together matcha, baking and personal moments.")}
         </SectionHeading>
         <div className="principles">
-          <span>Eigene Rezeptideen</span>
-          <span>Von Hand gemacht</span>
-          <span>Persönlich statt beliebig</span>
+          <span>{text(locale, "Eigene Rezeptideen", "Original recipe ideas")}</span>
+          <span>{text(locale, "Von Hand gemacht", "Made by hand")}</span>
+          <span>{text(locale, "Persönlich statt beliebig", "Personal, never generic")}</span>
         </div>
       </div>
       <FlyerLightbox
