@@ -44,6 +44,13 @@ export const cookieProducts = [
  */
 export const affiliateProducts = [
   {
+    name: "Nami Matcha – 15 % auf deine erste Bestellung",
+    copy: "Premium Matcha für deinen Zuhause-Moment. Nutze beim Checkout den Code SILVIA15.",
+    image: "/assets/images/favorites/nami-matcha.svg",
+    imageAlt: "Nami Matcha Logo",
+    href: "https://namimatcha.com/SILVIA15",
+  },
+  {
     name: "Nespresso Aeroccino Milchaufschäumer",
     copy: "Für heißen oder kalten, cremigen Milchschaum – passend für Cappuccino, Latte und Iced Drinks.",
     image: "/assets/images/favorites/nespresso-aeroccino-milchaufschaeumer.svg",
