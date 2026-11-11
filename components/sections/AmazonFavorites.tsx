@@ -1,28 +1,9 @@
 import Image from "next/image";
 import { brand } from "@/data/brand";
-import { media } from "@/data/media";
 import { affiliateProducts } from "@/data/products";
 import { type Locale, text } from "@/data/locale";
 import { FloatingMatchaParticles } from "@/components/ui/FloatingMatchaParticles";
 import styles from "./AmazonFavorites.module.css";
-
-const socialMoments = [
-  {
-    label: "Strawberry Matcha",
-    video: media.videos.strawberryMatcha,
-    poster: media.posters.strawberryMatcha,
-  },
-  {
-    label: "Matcha Cookies",
-    video: media.videos.cookieBaking,
-    poster: media.posters.cookieBaking,
-  },
-  {
-    label: "Fresh Matcha Moment",
-    video: media.videos.matchaCookieReveal,
-    poster: media.posters.matchaCookieReveal,
-  },
-] as const;
 
 export function AmazonFavorites({ locale = "de" }: { locale?: Locale }) {
   return (
@@ -49,31 +30,6 @@ export function AmazonFavorites({ locale = "de" }: { locale?: Locale }) {
         </div>
         <p>{text(locale, "Direkt verlinkt, damit du meine Matcha- und Coffee-Favoriten ohne Suchen findest.", "Linked directly, so you can find my matcha and coffee favorites without searching.")}</p>
       </div>
-
-      <section className={styles.socials} aria-label={text(locale, "Myvytamin Videos", "Myvytamin videos")}>
-        <div className={styles.socialsHeading}>
-          <div>
-            <p className={styles.eyebrow}>SEEN ON SOCIALS</p>
-            <h2>{text(locale, "So sehen die Favorites in echt aus.", "This is what the favorites look like in real life.")}</h2>
-          </div>
-          <a href={brand.instagramUrl} target="_blank" rel="noopener noreferrer">
-            {text(locale, "Auf Instagram ansehen", "View on Instagram")} <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-        <div className={styles.reels}>
-          {socialMoments.map((moment) => (
-            <article className={styles.reel} key={moment.video}>
-              <video autoPlay loop muted playsInline preload="metadata" poster={moment.poster}>
-                <source src={moment.video} type="video/mp4" />
-              </video>
-              <div>
-                <span>MYVYTAMIN MOMENT</span>
-                <strong>{moment.label}</strong>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
 
       <div className={styles.grid}>
         {affiliateProducts.map((item, index) => (

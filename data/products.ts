@@ -46,8 +46,8 @@ export const affiliateProducts = [
   {
     name: "Nami Matcha – dein Matcha-Moment",
     copy: "Premium Matcha für deinen Zuhause-Moment. Nutze beim Checkout den Code SILVIA15.",
-    image: "/assets/images/favorites/nami-matcha.svg",
-    imageAlt: "Nami Matcha Logo",
+    image: "/assets/images/favorites/nami-matcha-logo.jpg",
+    imageAlt: "Nami Matcha Logo auf gelbem Hintergrund",
     href: "https://namimatcha.com/SILVIA15",
   },
   {

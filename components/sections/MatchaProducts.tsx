@@ -1,5 +1,5 @@
+import Image from "next/image";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { SmartVideo } from "@/components/ui/SmartVideo";
 import { media } from "@/data/media";
 import { matchaProducts } from "@/data/products";
 import { type Locale, text } from "@/data/locale";
@@ -14,11 +14,7 @@ export function MatchaProducts({ locale = "de" }: { locale?: Locale }) {
       </SectionHeading>
       <div className="product-layout">
         <div className="signature-video">
-          <SmartVideo
-            src={media.videos.ube}
-            poster={media.posters.ube}
-            label="Ube Iced Matcha Latte Signature"
-          />
+          <Image src={media.posters.ube} alt="Ube Iced Matcha Latte Signature" fill sizes="(max-width: 900px) 90vw, 45vw" />
         </div>
         <div className="product-list">
           {matchaProducts.map((item, index) => (
