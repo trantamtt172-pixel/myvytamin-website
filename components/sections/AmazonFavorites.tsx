@@ -26,7 +26,7 @@ export function AmazonFavorites({ locale = "de" }: { locale?: Locale }) {
       <div className={styles.intro}>
         <div>
           <p className={styles.eyebrow}>MYVYTAMIN {text(locale, "FAVORITEN", "FAVORITES")}</p>
-          <h2>{text(locale, "Alles, was ich wirklich benutze.", "Everything I really use.")}</h2>
+          <h2>{text(locale, "Meine liebsten Picks für deine Kitchen-Corner.", "My favorite picks for your kitchen corner.")}</h2>
         </div>
         <p>{text(locale, "Direkt verlinkt, damit du meine Matcha- und Coffee-Favoriten ohne Suchen findest.", "Linked directly, so you can find my matcha and coffee favorites without searching.")}</p>
       </div>
