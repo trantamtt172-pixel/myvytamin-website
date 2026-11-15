@@ -18,6 +18,11 @@ const nextConfig: NextConfig = {
         hostname: "www.gosupps.com",
         pathname: "/media/catalog/product/**",
       },
+      {
+        protocol: "https",
+        hostname: "rimibaltic-res.cloudinary.com",
+        pathname: "/image/upload/**",
+      },
     ],
   },
   turbopack: {
