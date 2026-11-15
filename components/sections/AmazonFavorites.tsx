@@ -63,6 +63,8 @@ export function AmazonFavorites({ locale = "de" }: { locale?: Locale }) {
 
 const englishAffiliateCopy = [
   "Premium matcha for your at-home moment. Use the code SILVIA15 at checkout.",
+  "For creamy milk foam, matcha and favorite drinks – with three attachments and nine speed settings.",
+  "Creamy chai with vanilla and spices – hot or iced for a little café moment at home.",
   "For hot or cold, creamy milk foam – perfect for cappuccino, latte and iced drinks.",
   "For creamy latte moments at home – our Amazon favorite for a coffee-shop feel in your own kitchen.",
   "Ceremonial grade matcha for your creamy at-home matcha moment.",
@@ -77,6 +79,8 @@ const englishAffiliateCopy = [
 
 const englishAffiliateNames = [
   "Nami Matcha – your matcha moment",
+  "Matcha milk frother",
+  "Vanilla Chai Latte",
   "Creamy milk frother",
   "At-home coffee station",
   "Everyday ceremonial matcha",
