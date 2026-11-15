@@ -51,6 +51,20 @@ export const affiliateProducts = [
     href: "https://namimatcha.com/SILVIA15",
   },
   {
+    name: "Matcha Milchaufschäumer",
+    copy: "Für cremigen Milchschaum, Matcha und deine Lieblingsdrinks – mit drei Aufsätzen und neun Stufen.",
+    image: "https://m.media-amazon.com/images/I/31MifgMH9uL.__AC_SR200,225___.jpg",
+    imageAlt: "FoodVille MF06 Milchaufschäumer mit Aufsätzen und Ständer",
+    href: "https://link.amazon/B03XvOUP4",
+  },
+  {
+    name: "Vanilla Chai Latte",
+    copy: "Cremiger Chai mit Vanille und Gewürzen – heiß oder auf Eis ein kleiner Café-Moment zuhause.",
+    image: "https://rimibaltic-res.cloudinary.com/image/upload/b_white,c_limit,dpr_auto,f_auto,q_auto:low,w_auto/d_ecommerce:backend-fallback.png/MAT_184672_PCE_EE",
+    imageAlt: "David Rio Elephant Vanilla Chai Latte Dose",
+    href: "https://link.amazon/B0190WgnJ",
+  },
+  {
     name: "Cremiger Milchaufschäumer",
     copy: "Für heißen oder kalten, cremigen Milchschaum – passend für Cappuccino, Latte und Iced Drinks.",
     image: "/assets/images/favorites/nespresso-aeroccino-milchaufschaeumer.svg",
