@@ -17,13 +17,12 @@ export function PopupEventSection({ locale = "de" }: { locale?: Locale }) {
   return (
     <section className="section popup-section" id="popup">
       <div className="event-panel">
-        <SectionHeading eyebrow="SAVE THE DATE" title="Matcha, Cookies & good mood in Pfullingen.">
+        <SectionHeading eyebrow="SAVE THE DATE" title="Matcha, Cookies & good mood.">
           {text(locale, "Komm vorbei, genieße den Moment und probiere hausgemachte Iced Matcha Lattes und Cookies nach Myvytamin-Rezeptur. Alles 100 % hausgemacht mit Liebe.", "Come by, enjoy the moment and try homemade iced matcha lattes and cookies made with Myvytamin recipes. Everything is 100% homemade with love.")}
         </SectionHeading>
         <div className="event-facts">
           <strong>{event.displayDate}</strong>
           <span>{event.displayTime}</span>
-          <span>{event.address.street}, {event.address.city}</span>
           <em>{getCountdownText(locale)}</em>
         </div>
         <div className="menu-mini">
