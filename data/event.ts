@@ -4,11 +4,6 @@ export const event = {
   displayDate: "Samstag, 26. September 2026",
   shortDate: "26.09.2026",
   displayTime: "11:00-17:00 Uhr",
-  address: {
-    street: "Marktstr. 34",
-    city: "Pfullingen",
-    country: "DE",
-  },
   giveaway: {
     title: "Gewinne ein exklusives Matcha-Set!",
     steps: [
