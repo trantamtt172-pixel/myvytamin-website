@@ -22,13 +22,13 @@ const caveat = Caveat({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://myvytamin-website.vercel.app"),
-  title: "Myvytamin - Matcha, Cookies, Cakes & Catering in Pfullingen",
+  title: "Myvytamin - Matcha, Cookies, Cakes & Catering",
   description:
-    "Hausgemachte Matcha Drinks, Cookies, individuelle Torten und Matcha-Catering von Myvytamin in Pfullingen. Entdecke das nächste Pop-up und sende deine Anfrage.",
+    "Hausgemachte Matcha Drinks, Cookies, individuelle Torten und Matcha-Catering von Myvytamin. Entdecke das nächste Pop-up und sende deine Anfrage.",
   openGraph: {
     title: "Myvytamin - Good Matcha. Good Mood.",
     description:
-      "Matcha, Cookies, Cakes & Catering - hausgemacht in Pfullingen.",
+      "Matcha, Cookies, Cakes & Catering – hausgemacht.",
     images: ["/assets/images/original/myvytamin-flyer-logo-cakes.png"],
   },
 };
