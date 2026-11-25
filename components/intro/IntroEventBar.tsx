@@ -64,9 +64,6 @@ export function IntroEventBar({ debug = false }: { debug?: boolean }) {
           <div className="event-contact">
             <span>Instagram & TikTok: {brand.instagram}</span>
             <span>{brand.email}</span>
-            <span>
-              {event.address.street}, {event.address.city}
-            </span>
           </div>
         </div>
       </div>
