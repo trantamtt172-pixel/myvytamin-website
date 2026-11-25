@@ -35,7 +35,7 @@ export function HeroSection({ locale = "de" }: { locale?: Locale }) {
           {"Good\nMatcha.\nGood\nMood."}
         </VideoText>
         <p>
-          {text(locale, "Persönlich entwickelt, frisch gemixt und mit Liebe hausgemacht - für deinen Matcha-Moment in Pfullingen.", "Personally created, freshly mixed and homemade with love – for your matcha moment in Pfullingen.")}
+          {text(locale, "Persönlich entwickelt, frisch gemixt und mit Liebe hausgemacht – für deinen Matcha-Moment.", "Personally created, freshly mixed and homemade with love – for your matcha moment.")}
         </p>
         <div className="hero-actions">
           <Button href="#popup">{text(locale, "Pop-up entdecken", "Discover the pop-up")}</Button>
@@ -44,7 +44,7 @@ export function HeroSection({ locale = "de" }: { locale?: Locale }) {
           </Button>
         </div>
         <p className="microcopy">
-          {text(locale, "Next pop-up", "Next pop-up")} / {event.shortDate} / {event.address.city}
+          {text(locale, "Next pop-up", "Next pop-up")} / {event.shortDate}
         </p>
       </div>
       <div className="hero-phone">
